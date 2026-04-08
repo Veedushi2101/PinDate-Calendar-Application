@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    --background: 40 20% 97%;
+    --foreground: 0 0% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 18%;
+
+    --primary: 160 12% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 160 20% 70%;
+    --secondary-foreground: 0 0% 18%;
+
+    --muted: 40 15% 93%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 160 12% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 60% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 40 10% 88%;
+    --input: 40 10% 88%;
+    --ring: 160 12% 55%;
+
+    --radius: 0.75rem;
+
+    /* Note colors */
+    --note-yellow: 45 85% 84%;
+    --note-blue: 210 50% 90%;
+    --note-green: 130 30% 90%;
+    --note-coral: 5 50% 89%;
+    --note-lavender: 270 35% 90%;
+
+    /* Calendar specific */
+    --calendar-hover: 160 12% 55%;
+    --calendar-range: 160 20% 92%;
+    --calendar-selected: 160 12% 45%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Typography */
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Source Sans 3', system-ui, sans-serif;
+
+    /* Shadows */
+    --shadow-card: 0 2px 12px -2px hsl(0 0% 0% / 0.06);
+    --shadow-card-hover: 0 8px 30px -4px hsl(0 0% 0% / 0.1);
+    --shadow-panel: 0 4px 24px -4px hsl(0 0% 0% / 0.08);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .text-display {
+    font-family: var(--font-display);
+  }
+
+  .text-body {
+    font-family: var(--font-body);
+  }
+}
